@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ng-cribs</title>
+    <title>Angular Estates</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"
   </head>
   <body ng-app="ngCribs" ng-controller="cribsController">
-    
+
     <!-- Nav Bar -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -16,10 +16,10 @@
         </div>
       </div>
     </nav>
-    
-    <div class="container">      
+
+    <div class="container">
     <!--Min and Max Price Selection -->
-      <div class="col-sm-12 price-form">      
+      <div class="col-sm-12 price-form">
         <div class="row price-form-row" ng-if="!addListing">
           <div class="col-sm-6">
             <div class="input-group">
@@ -36,7 +36,7 @@
                 <option value="900000">$900,000</option>
                 <option value="1000000">$1,000,000</option>
               </select>
-            </div>          
+            </div>
           </div>
 
           <div class="col-sm-6">
@@ -54,18 +54,18 @@
                 <option value="900000">$900,000</option>
                 <option value="1000000">$1,000,000</option>
               </select>
-            </div>          
+            </div>
           </div>
         </div>
-        <button 
-          class="btn btn-primary" 
-          ng-click="addListing = !addListing" 
+        <button
+          class="btn btn-primary"
+          ng-click="addListing = !addListing"
           ng-show="!addListing">Add Listing
         </button>
 
-        <button 
-          class="btn btn-danger" 
-          ng-click="addListing = !addListing" 
+        <button
+          class="btn btn-danger"
+          ng-click="addListing = !addListing"
           ng-show="addListing">Close
         </button>
 
@@ -77,10 +77,10 @@
               <div class="col-sm-4">
                 <div class="input-group">
                   <span class="input-group-addon">Address</span>
-                  <input 
-                    type="text" 
-                    placeholder="Enter the address" 
-                    class="form-control" 
+                  <input
+                    type="text"
+                    placeholder="Enter the address"
+                    class="form-control"
                     ng-model="newListing.address">
                 </div>
               </div>
@@ -88,10 +88,10 @@
               <div class="col-sm-4">
                 <div class="input-group">
                   <span class="input-group-addon">Price</span>
-                  <input 
-                    type="text" 
-                    placeholder="Enter the price" 
-                    class="form-control" 
+                  <input
+                    type="text"
+                    placeholder="Enter the price"
+                    class="form-control"
                     ng-model="newListing.price">
                 </div>
               </div>
@@ -99,11 +99,11 @@
               <div class="col-sm-4">
                 <div class="input-group">
                   <span class="input-group-addon">Property Type</span>
-                  <select 
-                    type="select" 
-                    name="propertyType" 
-                    id="propertyType" 
-                    class="form-control" 
+                  <select
+                    type="select"
+                    name="propertyType"
+                    id="propertyType"
+                    class="form-control"
                     ng-model="newListing.type">
                       <option value="House">House</option>
                       <option value="Condo">Condo</option>
@@ -118,10 +118,10 @@
               <div class="col-sm-4">
                 <div class="input-group">
                   <span class="input-group-addon">Description</span>
-                  <textarea 
-                    type="text" 
-                    placeholder="Enter the description" 
-                    class="form-control" 
+                  <textarea
+                    type="text"
+                    placeholder="Enter the description"
+                    class="form-control"
                     ng-model="newListing.description">
                   </textarea>
                 </div>
@@ -132,10 +132,10 @@
                 <div class="col-sm-4">
                   <div class="input-group">
                     <span class="input-group-addon">Beds</span>
-                    <input 
-                      type="text" 
-                      placeholder="Bedrooms" 
-                      class="form-control" 
+                    <input
+                      type="text"
+                      placeholder="Bedrooms"
+                      class="form-control"
                       ng-model="newListing.details.bedrooms">
                   </div>
                 </div>
@@ -143,10 +143,10 @@
                 <div class="col-sm-4">
                   <div class="input-group">
                     <span class="input-group-addon">Baths</span>
-                    <input 
-                      type="text" 
-                      placeholder="Bathrooms" 
-                      class="form-control" 
+                    <input
+                      type="text"
+                      placeholder="Bathrooms"
+                      class="form-control"
                       ng-model="newListing.details.bathrooms">
                   </div>
                 </div>
@@ -154,16 +154,16 @@
                 <div class="col-sm-4">
                   <div class="input-group">
                     <span class="input-group-addon">SqFt</span>
-                    <input 
-                      type="text" 
-                      placeholder="Square Footage" 
-                      class="form-control" 
+                    <input
+                      type="text"
+                      placeholder="Square Footage"
+                      class="form-control"
                       ng-model="newListing.details.area">
                   </div>
                 </div>
               </div>
             </div>
-            <button 
+            <button
               class="btn btn-primary listing-button"
               ng-click="addCrib(newListing)"
               ng-show="addListing">Add
@@ -179,7 +179,7 @@
              <div class="col-sm-4">
                <div class="input-group">
                  <span class="input-group-addon">Address</span>
-                 <input 
+                 <input
                   type="text"
                   placeholder="Enter the address"
                   class="form-control"
@@ -190,7 +190,7 @@
              <div class="col-sm-4">
                <div class="input-group">
                  <span class="input-group-addon">Price</span>
-                 <input 
+                 <input
                   type="text"
                   placeholder="Enter the price"
                   class="form-control"
@@ -201,11 +201,11 @@
              <div class="col-sm-4">
                <div class="input-group">
                  <span class="input-group-addon">Property Type</span>
-                 <select 
+                 <select
                   type="select"
                   name="propertyType"
-                  id="propertyType" 
-                  class="form-control" 
+                  id="propertyType"
+                  class="form-control"
                   ng-model="existingListing.type">
                      <option value="House">House</option>
                      <option value="Condo">Condo</option>
@@ -220,7 +220,7 @@
              <div class="col-sm-4">
                <div class="input-group">
                  <span class="input-group-addon">Description</span>
-                 <textarea 
+                 <textarea
                   type="text"
                   placeholder="Enter the description"
                   class="form-control"
@@ -234,7 +234,7 @@
                <div class="col-sm-4">
                  <div class="input-group">
                    <span class="input-group-addon">Beds</span>
-                   <input 
+                   <input
                     type="text"
                     placeholder="Bedrooms"
                     class="form-control"
@@ -266,22 +266,22 @@
 
              </div>
 
-             <button 
+             <button
               class="btn btn-primary listing-button"
-              ng-click="saveCribEdit()" 
+              ng-click="saveCribEdit()"
               ng-show="editListing">Save
              </button>
 
-             <button 
-              class="btn btn-danger listing-button" 
-              ng-click="deleteCrib(existingListing)" 
+             <button
+              class="btn btn-danger listing-button"
+              ng-click="deleteCrib(existingListing)"
               ng-show="editListing">Delete
              </button>
 
           </div>
       </div>
     </div>
-        
+
 
 
     <!--Real Estate Listings -->
@@ -303,7 +303,7 @@
                       Details
               </button>
 
-              <button 
+              <button
                 class="btn btn-xs btn-primary"
                 ng-show="showDetails"
                 ng-click="editCrib(crib)">Edit
@@ -322,7 +322,7 @@
                   <span class="label label-primary">Baths: {{crib.details.bathrooms}}</span>
                   <span class="label label-primary">SqFt: {{crib.details.area}}</span>
                 </h4>
-                
+
                 <p>{{crib.description}}</p>
               </div>
             </div>
