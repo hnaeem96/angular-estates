@@ -8,7 +8,6 @@
   </head>
   <body ng-app="ngCribs" ng-controller="cribsController">
 
-    <!-- Nav Bar -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -18,7 +17,6 @@
     </nav>
 
     <div class="container">
-    <!--Min and Max Price Selection -->
       <div class="col-sm-12 price-form">
         <div class="row price-form-row" ng-if="!addListing">
           <div class="col-sm-6">
@@ -282,9 +280,6 @@
       </div>
     </div>
 
-
-
-    <!--Real Estate Listings -->
       <div class="container">
         <div class="col-sm-4" ng-repeat="crib in cribs | cribsFilter:priceInfo | orderBy: '-id'">
           <div class="thumbnail">
